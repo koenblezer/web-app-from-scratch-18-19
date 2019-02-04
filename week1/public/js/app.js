@@ -10,6 +10,6 @@ http.onreadystatechange=function(){
       console.log(response);
       var data = JSON.parse(response);
       console.log(data);
-      document.querySelector('.gif').innerHTML = "<img src=" + data.data[0].embed_url + "\" alt=\"gif\">/";
+      document.querySelector('.gif').innerHTML = "<img src=" + data.data[0].embed_url + " alt=\"gif\"/>";
   }
 }
