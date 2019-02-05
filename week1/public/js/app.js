@@ -1,5 +1,5 @@
 var http = new XMLHttpRequest();
-var url = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=1";
+var url = "http://api.giphy.com/v1/gifs/search?q=donald+trump&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=5";
 
 http.open("GET", url);
 http.send();
@@ -10,6 +10,10 @@ http.onreadystatechange=function(){
       console.log(response);
       var data = JSON.parse(response);
       console.log(data);
-      document.querySelector('.gif').innerHTML = "<img src=" + data.data[0].embed_url + " alt=\"gif\"/>";
+      document.querySelector('#gif1').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + data.data[0].id + "/giphy.gif\" alt=\"gif1\"/>";
+      document.querySelector('#gif2').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + data.data[1].id + "/giphy.gif\" alt=\"gif2\"/>";
+      document.querySelector('#gif3').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + data.data[2].id + "/giphy.gif\" alt=\"gif3\"/>";
+      document.querySelector('#gif4').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + data.data[3].id + "/giphy.gif\" alt=\"gif4\"/>";
+      document.querySelector('#gif5').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + data.data[4].id + "/giphy.gif\" alt=\"gif5\"/>";
   }
 }
