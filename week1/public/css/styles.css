@@ -1,0 +1,9 @@
+#imgresults {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+input + input {
+  margin-bottom: 1em;
+}
