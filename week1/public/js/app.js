@@ -1,5 +1,5 @@
 var http = new XMLHttpRequest();
-var url = "http://api.giphy.com/v1/gifs/search?q=tree&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=5";
+var url = "https://api.giphy.com/v1/gifs/search?q=tree&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=5";
 
 http.open("GET", url);
 http.send();
@@ -24,7 +24,7 @@ function search(){
   document.getElementById('submit').onclick = function() {
 
     var searchword = document.getElementById('searchword').value;
-    url = "http://api.giphy.com/v1/gifs/search?q=" + searchword + "&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=5";
+    url = "https://api.giphy.com/v1/gifs/search?q=" + searchword + "&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=5";
 
     search = new XMLHttpRequest();
 
@@ -35,9 +35,7 @@ function search(){
         if(this.readyState==4 && this.status==200){
           // console.log(response);
           var searchdata = JSON.parse(search.responseText);
-          console.log("searchdata: " + searchdata);
           console.log(search.responseText);
-          console.log('searchdata = ' + searchdata);
           document.querySelector('#gif1').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + searchdata.data[0].id + "/giphy.gif\" alt=\"gif1\"/>";
           document.querySelector('#gif2').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + searchdata.data[1].id + "/giphy.gif\" alt=\"gif2\"/>";
           document.querySelector('#gif3').innerHTML = "<img src=\"https:\/\/media.giphy.com\/media\/" + searchdata.data[2].id + "/giphy.gif\" alt=\"gif3\"/>";
