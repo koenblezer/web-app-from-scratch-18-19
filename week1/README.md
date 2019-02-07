@@ -1,7 +1,12 @@
 # Week 1 - Hello API 🐒
 
-Doel: Data ophalen uit een API en renderen in een overzichtspagina.
+LIVE DEMO: https://koenblezer.github.io/web-app-from-scratch-18-19/week1/index.html
 
-[Opdrachten](https://drive.google.com/open?id=1OVhWQNaCgSluYviTKKWcApkyPd23xow1PiExb8GYANM)
+Deze app is bedoeld om gebruikers inspiratie te bieden voor hun GIF-reacties.
 
-[Slides](https://drive.google.com/open?id=1Rjl9xqXoKniQSRJPdkU1O5YwWC33SJK8KiV0a-H_xZU)
+Wat doet jou app, wat is het doel? (passing butter)
+Welke actoren zitten er in jouw applicatie? (actor diagram)
+Welke API wordt gebruikt en wat zijn de beperkingen? (rate limit)
+Hoe flowed interactie door de applicatie? (interaction diagram)
+Welke design patterns en best practices
+Wat zou je nog willen toevoegen (feature wishlist / backlog)

@@ -7,3 +7,8 @@
 input + input {
   margin-bottom: 1em;
 }
+
+img {
+  height: auto;
+  width: auto;
+}
