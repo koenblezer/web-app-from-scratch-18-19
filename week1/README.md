@@ -24,3 +24,4 @@ Er wordt gebruik gemaakt van de Giphy API, Giphy is een van de grootste GIF-data
 # Feature wishlist
 
 - Populaire zoektermen tonen
+- Detailpagina van geselecteerde gif
