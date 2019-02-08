@@ -1,3 +1,5 @@
+"use strict";
+
 var http = new XMLHttpRequest();
 var url = "https://api.giphy.com/v1/gifs/search?q=tree&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=50";
 
@@ -6,20 +8,17 @@ http.open("GET", url);
 http.send();
 
 
-http.onreadystatechange=function(){
-    if(this.readyState==4 && this.status==200){
-      // console.log(response);
-      var data = JSON.parse(http.responseText);
-      // console.log(data);
+http.onreadystatechange = function() {
+  if (http.readyState == 4 && http.status == 200) {
+    var data = JSON.parse(http.responseText);
 
-        var imgresults = document.querySelector('#imgresults');
+    var imgresults = document.querySelector('#imgresults');
 
-        for (var i = 0; i < data.data.length; i++) {
+    for (var i = 0; i < data.data.length; i++) {
 
-        console.log(i);
-        var image = document.createElement('img');
-        image.setAttribute('src', 'https://media.giphy.com/media/'+ data.data[i].id + '/giphy.gif');
-        imgresults.appendChild(image);
+      var image = document.createElement('img');
+      image.setAttribute('src', 'https://media.giphy.com/media/' + data.data[i].id + '/giphy.gif');
+      imgresults.appendChild(image);
 
 
 
@@ -32,38 +31,41 @@ http.onreadystatechange=function(){
   }
 }
 
-search();
+document.addEventListener('submit', function(e){
 
-function search(){
+  e.preventDefault();
+
+});
+
+(async function () {
 
   document.getElementById('submit').onclick = function() {
+
+    console.log('PROOP');
 
     var searchword = document.getElementById('searchword').value;
     url = "https://api.giphy.com/v1/gifs/search?q=" + searchword + "&api_key=JbB7Jd0sog3jHtYdb3woTkONWQYNSTfp&limit=50";
 
-    search = new XMLHttpRequest();
+    var search = new XMLHttpRequest();
 
     search.open("GET", url);
     search.send();
 
-    search.onreadystatechange=function(){
-        if(this.readyState==4 && this.status==200){
-          // console.log(response);
-          var searchdata = JSON.parse(search.responseText);
-          // console.log(search.responseText);
+    search.onreadystatechange = function() {
+      if (search.readyState == 4 && search.status == 200) {
+        var searchdata = JSON.parse(search.responseText);
 
-          document.querySelector('#imgresults').innerHTML = "";
+        document.querySelector('#imgresults').innerHTML = "";
 
-          for (var i = 0; i < searchdata.data.length; i++) {
+        for (var i = 0; i < searchdata.data.length; i++) {
 
           console.log(i);
           var image = document.createElement('img');
-          image.setAttribute('src', 'https://media.giphy.com/media/'+ searchdata.data[i].id + '/giphy.gif');
+          image.setAttribute('src', 'https://media.giphy.com/media/' + searchdata.data[i].id + '/giphy.gif');
           imgresults.appendChild(image);
-      }
+        }
 
+      }
     }
   }
-}
-
-}
+})();
