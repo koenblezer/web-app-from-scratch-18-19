@@ -2,11 +2,27 @@
 
 LIVE DEMO: https://koenblezer.github.io/web-app-from-scratch-18-19/week1/index.html
 
-Deze app is bedoeld om gebruikers inspiratie te bieden voor hun GIF-reacties.
+# Doel van de app
 
-Wat doet jou app, wat is het doel? (passing butter)
-Welke actoren zitten er in jouw applicatie? (actor diagram)
-Welke API wordt gebruikt en wat zijn de beperkingen? (rate limit)
+Deze app is bedoelt om de gebruiker op een snelle manier originele gif-reacties te laten vinden.
+
+# Actor diagram
+
+![actordiagram](actor_diagram.jpg)
+
+# API keuze en beperkingen
+
+Er wordt gebruik gemaakt van de Giphy API, Giphy is een van de grootste GIF-databases ter wereld. De development API-key heeft een rate limit van 42 zoek verzoeken per uur, 1000 zoek verzoeken per dag en 10 upload verzoeken per dag.
+
+# Interactie-flow
+
 Hoe flowed interactie door de applicatie? (interaction diagram)
-Welke design patterns en best practices
-Wat zou je nog willen toevoegen (feature wishlist / backlog)
+
+# Design patterns en best practices
+
+??
+
+# Feature wishlist
+
+- Populaire zoektermen tonen
+-
