@@ -16,13 +16,11 @@ Er wordt gebruik gemaakt van de Giphy API, Giphy is een van de grootste GIF-data
 
 # Interactie-flow
 
-Hoe flowed interactie door de applicatie? (interaction diagram)
+
 
 # Design patterns en best practices
 
-??
 
 # Feature wishlist
 
 - Populaire zoektermen tonen
--
